@@ -37,7 +37,6 @@
             cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23FF6FD6" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>') 12 12, pointer;
         }
 
-        /* Falling Stars */
         .falling-star {
             position: fixed;
             pointer-events: none;
@@ -56,7 +55,6 @@
             }
         }
 
-        /* Header */
         header {
             position: fixed;
             top: 0;
@@ -96,12 +94,6 @@
             margin-left: -15px;
         }
 
-        .logo-text {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--text);
-        }
-
         nav {
             display: flex;
             gap: 30px;
@@ -125,13 +117,11 @@
             font-weight: 600;
         }
 
-        /* Main Content */
         main {
             margin-top: 100px;
             padding: 40px 0;
         }
 
-        /* Grid View */
         .grid-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -213,7 +203,6 @@
             margin-top: 10px;
         }
 
-        /* About Page */
         .about-container {
             display: none;
             max-width: 800px;
@@ -236,7 +225,6 @@
             line-height: 1.6;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .grid-container {
                 grid-template-columns: 1fr;
@@ -249,17 +237,8 @@
             .header-content {
                 padding: 0 10px;
             }
-
-            .column-item {
-                grid-template-columns: 1fr;
-            }
-
-            .column-divider {
-                display: none;
-            }
         }
 
-        /* Loading Animation */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -319,276 +298,8 @@
     </header>
 
     <main>
-        <!-- Grid View -->
-        <div class="grid-container active" id="gridView">
-            <div class="grid-item">
-                <div class="grid-content">
-                    <div class="thumbnail">
-                        <img src="sarr.png" alt="Sarr branding">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-title">[2025 Season menu] Sarr</div>
-                        <div class="project-meta">Poster design, Graphic design</div>
-                        <div class="project-date">April 2025</div>
-                        <div class="project-client">client: Sarr</div>
-                    </div>
-                </div>
-            </div>
+        <div class="grid-container active" id="gridView"></div>
 
-            <div class="grid-item">
-                <div class="grid-content">
-                    <div class="thumbnail">
-                        <img src="sarr.png" alt="Sarr branding">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-title">Sarr</div>
-                        <div class="project-meta">Art directing, Brand identity, Photography</div>
-                        <div class="project-date">April 2025</div>
-                        <div class="project-client">client: Sarr</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid-item">
-                <div class="grid-content">
-                    <div class="thumbnail">
-                        <img src="sarr.png" alt="Sarr branding">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-title">TYMORA</div>
-                        <div class="project-meta">Speculative design, Brand identity</div>
-                        <div class="project-date">December 2024</div>
-                        <div class="project-client">class: Transformation Design</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid-item">
-                <div class="grid-content">
-                    <div class="thumbnail">
-                        <img src="sarr.png" alt="Sarr branding">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-title">Digital Time Capsule</div>
-                        <div class="project-meta">Web development, Three.js, Interactive</div>
-                        <div class="project-date">November 2024</div>
-                        <div class="project-client">Personal project</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid-item">
-                <div class="grid-content">
-                    <div class="thumbnail">
-                        <img src="sarr.png" alt="Sarr branding">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-title">Unedited</div>
-                        <div class="project-meta">Interactive web, Hand tracking</div>
-                        <div class="project-date">October 2024</div>
-                        <div class="project-client">class: Cross-disciplinary Studio</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid-item">
-                <div class="grid-content">
-                    <div class="thumbnail">
-                        <img src="sarr.png" alt="Sarr branding">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-title">Holiday Nagging Visualization</div>
-                        <div class="project-meta">Audio-visual art, Data visualization</div>
-                        <div class="project-date">September 2024</div>
-                        <div class="project-client">Personal project</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid-item">
-                <div class="grid-content">
-                    <div class="thumbnail">
-                        <img src="sarr.png" alt="Sarr branding">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-title">UFO Data Sculpture</div>
-                        <div class="project-meta">Three.js, Data visualization, 3D printing</div>
-                        <div class="project-date">August 2024</div>
-                        <div class="project-client">Personal project</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid-item">
-                <div class="grid-content">
-                    <div class="thumbnail">
-                        <img src="sarr.png" alt="Sarr branding">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-title">Emotion Tea Blending</div>
-                        <div class="project-meta">Interactive system, Web design</div>
-                        <div class="project-date">June 2024</div>
-                        <div class="project-client">class: Interactive Media</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid-item">
-                <div class="grid-content">
-                    <div class="thumbnail">
-                        <img src="sarr.png" alt="Sarr branding">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-title">Generative Typography</div>
-                        <div class="project-meta">p5.js, Particle system, Web art</div>
-                        <div class="project-date">May 2024</div>
-                        <div class="project-client">Personal project</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid-item">
-                <div class="grid-content">
-                    <div class="thumbnail">
-                        <img src="sarr.png" alt="Sarr branding">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-title">AR Time Experience</div>
-                        <div class="project-meta">Augmented reality, Speculative design</div>
-                        <div class="project-date">April 2024</div>
-                        <div class="project-client">class: Transformation Design</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid-item">
-                <div class="grid-content">
-                    <div class="thumbnail">
-                        <img src="sarr.png" alt="Sarr branding">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-title">Cyber Garden</div>
-                        <div class="project-meta">Installation, Interactive media</div>
-                        <div class="project-date">March 2024</div>
-                        <div class="project-client">Exhibition project</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid-item">
-                <div class="grid-content">
-                    <div class="thumbnail">
-                        <img src="sarr.png" alt="Sarr branding">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-title">Sound Waves</div>
-                        <div class="project-meta">Audio visualization, Web GL</div>
-                        <div class="project-date">February 2024</div>
-                        <div class="project-client">Personal project</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid-item">
-                <div class="grid-content">
-                    <div class="thumbnail">
-                        <img src="sarr.png" alt="Sarr branding">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-title">Memory Archive</div>
-                        <div class="project-meta">Database design, Web interface</div>
-                        <div class="project-date">January 2024</div>
-                        <div class="project-client">class: Data & Society</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid-item">
-                <div class="grid-content">
-                    <div class="thumbnail">
-                        <img src="sarr.png" alt="Sarr branding">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-title">Kinetic Poetry</div>
-                        <div class="project-meta">Motion design, Typography</div>
-                        <div class="project-date">December 2023</div>
-                        <div class="project-client">Personal project</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid-item">
-                <div class="grid-content">
-                    <div class="thumbnail">
-                        <img src="sarr.png" alt="Sarr branding">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-title">Climate Futures</div>
-                        <div class="project-meta">Speculative design, Editorial</div>
-                        <div class="project-date">November 2023</div>
-                        <div class="project-client">class: Design Fiction</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid-item">
-                <div class="grid-content">
-                    <div class="thumbnail">
-                        <img src="sarr.png" alt="Sarr branding">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-title">Neural Networks</div>
-                        <div class="project-meta">Machine learning, Visualization</div>
-                        <div class="project-date">October 2023</div>
-                        <div class="project-client">Research project</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid-item">
-                <div class="grid-content">
-                    <div class="thumbnail">
-                        <img src="sarr.png" alt="Sarr branding">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-title">Digital Botanica</div>
-                        <div class="project-meta">3D modeling, Blender, Animation</div>
-                        <div class="project-date">September 2023</div>
-                        <div class="project-client">Personal project</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid-item">
-                <div class="grid-content">
-                    <div class="thumbnail">
-                        <img src="sarr.png" alt="Sarr branding">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-title">Lunar Calendar</div>
-                        <div class="project-meta">Editorial design, Print</div>
-                        <div class="project-date">August 2023</div>
-                        <div class="project-client">client: Moon Studio</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid-item">
-                <div class="grid-content">
-                    <div class="thumbnail">
-                        <img src="sarr.png" alt="Sarr branding">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-title">Urban Flows</div>
-                        <div class="project-meta">Data visualization, City mapping</div>
-                        <div class="project-date">July 2023</div>
-                        <div class="project-client">class: Information Design</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- About Page -->
         <div class="about-container" id="aboutPage">
             <h1>About</h1>
             <p>Chaelin Kim is a graduate design student at Pratt Institute in New York, specializing in interactive media, data visualization, and speculative design.</p>
@@ -647,6 +358,46 @@
             }, 1000);
         });
 
+        // Load and display projects
+        let projectsData = [];
+
+        fetch('projects-data.json')
+            .then(response => response.json())
+            .then(data => {
+                projectsData = data.projects;
+                displayProjects(projectsData);
+            })
+            .catch(error => console.error('Error loading projects:', error));
+
+        function displayProjects(projects) {
+            const gridView = document.getElementById('gridView');
+            gridView.innerHTML = '';
+
+            projects.forEach(project => {
+                const gridItem = document.createElement('div');
+                gridItem.className = 'grid-item';
+                gridItem.innerHTML = `
+                    <div class="grid-content">
+                        <div class="thumbnail">
+                            <img src="${project.thumbnail}" alt="${project.title}">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-title">${project.title}</div>
+                            <div class="project-meta">${project.meta}</div>
+                            <div class="project-date">${project.date}</div>
+                            <div class="project-client">${project.client}</div>
+                        </div>
+                    </div>
+                `;
+
+                gridItem.addEventListener('click', () => {
+                    window.location.href = `project.html?id=${project.id}`;
+                });
+
+                gridView.appendChild(gridItem);
+            });
+        }
+
         // Navigation
         const navLinks = document.querySelectorAll('.nav-link');
         const aboutPage = document.getElementById('aboutPage');
@@ -667,23 +418,6 @@
                     aboutPage.classList.remove('active');
                     gridView.style.display = 'grid';
                 }
-            });
-        });
-
-        // Project Click - 상세 페이지로 이동
-        document.querySelectorAll('.grid-item').forEach((item, index) => {
-            item.addEventListener('click', () => {
-                const title = item.querySelector('.project-title').textContent;
-                
-                // 프로젝트 슬러그 생성
-                const slug = title.toLowerCase()
-                    .replace(/\[.*?\]/g, '') // 대괄호 제거
-                    .replace(/\s+/g, '-')     // 공백을 하이픈으로
-                    .replace(/[^\w\-가-힣]/g, '') // 특수문자 제거
-                    .trim();
-                
-                // 상세 페이지로 이동
-                window.location.href = `project-${slug}.html`;
             });
         });
     </script>
