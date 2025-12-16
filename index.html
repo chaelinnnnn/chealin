@@ -602,11 +602,9 @@
         // Video Seamless Loop Fix
         const logoVideo = document.querySelector('.logo video');
         if (logoVideo) {
-            // Remove default loop and handle manually
             logoVideo.removeAttribute('loop');
             
             logoVideo.addEventListener('timeupdate', function() {
-                // Reset before video ends to prevent black screen
                 if (this.currentTime >= this.duration - 0.1) {
                     this.currentTime = 0;
                 }
@@ -617,13 +615,12 @@
                 this.play();
             });
             
-            // Ensure video plays
             logoVideo.play().catch(e => console.log('Video autoplay prevented'));
         }
 
         // Falling Stars Effect
         let lastStarTime = 0;
-        const starInterval = 50; // 별 생성 간격 (ms)
+        const starInterval = 50;
 
         document.addEventListener('mousemove', (e) => {
             const now = Date.now();
@@ -645,7 +642,6 @@
             star.appendChild(path);
             document.body.appendChild(star);
 
-            // 애니메이션 끝난 후 제거
             setTimeout(() => {
                 star.remove();
             }, 1000);
@@ -674,10 +670,20 @@
             });
         });
 
-        // Project Click
-        document.querySelectorAll('.grid-item').forEach(item => {
+        // Project Click - 상세 페이지로 이동
+        document.querySelectorAll('.grid-item').forEach((item, index) => {
             item.addEventListener('click', () => {
-                alert('프로젝트 상세 페이지로 이동합니다.');
+                const title = item.querySelector('.project-title').textContent;
+                
+                // 프로젝트 슬러그 생성
+                const slug = title.toLowerCase()
+                    .replace(/\[.*?\]/g, '') // 대괄호 제거
+                    .replace(/\s+/g, '-')     // 공백을 하이픈으로
+                    .replace(/[^\w\-가-힣]/g, '') // 특수문자 제거
+                    .trim();
+                
+                // 상세 페이지로 이동
+                window.location.href = `project-${slug}.html`;
             });
         });
     </script>
