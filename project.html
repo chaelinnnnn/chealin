@@ -88,6 +88,7 @@
             font-size: 13px;
             font-weight: 600;
             transition: opacity 0.2s;
+            line-height: 1.1;
         }
 
         nav a:hover {
@@ -334,25 +335,6 @@
             const content = `
                 <div class="project-header">
                     <h1 class="project-title">${project.title}</h1>
-                    
-                    <div class="project-meta-grid">
-                        <div class="meta-item">
-                            <div class="meta-label">Role</div>
-                            <div class="meta-value">${project.meta}</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Date</div>
-                            <div class="meta-value">${project.date}</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Client</div>
-                            <div class="meta-value">${project.client}</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Type</div>
-                            <div class="meta-value">${project.type}</div>
-                        </div>
-                    </div>
 
                     <div class="project-description">
                         <p>${project.description}</p>
