@@ -1,0 +1,254 @@
+{
+  "projects": [
+    {
+      "id": "2025-season-menu-sarr",
+      "title": "[2025 Season menu] Sarr",
+      "meta": "Poster design, Graphic design",
+      "date": "April 2025",
+      "client": "client: Sarr",
+      "type": "Poster Design",
+      "description": "Seasonal menu poster design for Sarr, exploring typography and visual identity through graphic design.",
+      "thumbnail": "sarr.png",
+      "images": [
+        { "src": "sarr.png", "caption": "Sarr seasonal menu poster" }
+      ]
+    },
+    {
+      "id": "sarr",
+      "title": "Sarr",
+      "meta": "Art directing, Brand identity, Photography",
+      "date": "April 2025",
+      "client": "client: Sarr",
+      "type": "Brand Identity, Art Direction",
+      "description": "Sarr is a comprehensive brand identity project that explores the intersection of contemporary design and traditional craftsmanship. The project encompasses visual identity development, art direction, and photography to create a cohesive brand experience. The approach focused on creating a minimal yet distinctive visual language that reflects the brand's values of authenticity and quality.",
+      "thumbnail": "sarr.png",
+      "images": [
+        { "src": "sarr.png", "caption": "Main brand identity visual" },
+        { "src": "sarr.png", "caption": "Typography and color system" },
+        { "src": "sarr.png", "caption": "Brand photography direction" },
+        { "src": "sarr.png", "caption": "Brand applications" }
+      ]
+    },
+    {
+      "id": "tymora",
+      "title": "TYMORA",
+      "meta": "Speculative design, Brand identity",
+      "date": "December 2024",
+      "client": "class: Transformation Design",
+      "type": "Speculative Design",
+      "description": "A speculative design project exploring the concept of time as a purchasable commodity through AR glasses and brand identity development. TYMORA challenges conventional relationships with time through immersive augmented reality experiences.",
+      "thumbnail": "sarr.png",
+      "images": [
+        { "src": "sarr.png", "caption": "TYMORA brand identity" }
+      ]
+    },
+    {
+      "id": "digital-time-capsule",
+      "title": "Digital Time Capsule",
+      "meta": "Web development, Three.js, Interactive",
+      "date": "November 2024",
+      "client": "Personal project",
+      "type": "Interactive Web",
+      "description": "An interactive 3D web experience allowing users to create and customize time capsules with objects that unlock at specified future dates. Built with Three.js, this project explores themes of memory, anticipation, and digital preservation.",
+      "thumbnail": "sarr.png",
+      "images": [
+        { "src": "sarr.png", "caption": "Digital time capsule interface" }
+      ]
+    },
+    {
+      "id": "unedited",
+      "title": "Unedited",
+      "meta": "Interactive web, Hand tracking",
+      "date": "October 2024",
+      "client": "class: Cross-disciplinary Studio",
+      "type": "Interactive Media",
+      "description": "An interactive web experience utilizing hand tracking technology for gesture-based controls and receipt printing simulations. This project explores the intersection of physical gesture and digital interaction.",
+      "thumbnail": "sarr.png",
+      "images": [
+        { "src": "sarr.png", "caption": "Hand tracking interface" }
+      ]
+    },
+    {
+      "id": "holiday-nagging-visualization",
+      "title": "Holiday Nagging Visualization",
+      "meta": "Audio-visual art, Data visualization",
+      "date": "September 2024",
+      "client": "Personal project",
+      "type": "Audio-Visual Art",
+      "description": "A cultural art piece using audio recordings to explore Korean family dynamics during holidays through interactive visualization. This project combines data visualization with personal narrative to create a resonant exploration of cultural expectations.",
+      "thumbnail": "sarr.png",
+      "images": [
+        { "src": "sarr.png", "caption": "Holiday nagging visualization" }
+      ]
+    },
+    {
+      "id": "ufo-data-sculpture",
+      "title": "UFO Data Sculpture",
+      "meta": "Three.js, Data visualization, 3D printing",
+      "date": "August 2024",
+      "client": "Personal project",
+      "type": "Data Sculpture",
+      "description": "A comprehensive data visualization featuring metallic sculptures representing UFO sightings across different US states. This project translates data into physical form, exploring the relationship between information and material presence.",
+      "thumbnail": "sarr.png",
+      "images": [
+        { "src": "sarr.png", "caption": "UFO data sculpture" }
+      ]
+    },
+    {
+      "id": "emotion-tea-blending",
+      "title": "Emotion Tea Blending",
+      "meta": "Interactive system, Web design",
+      "date": "June 2024",
+      "client": "class: Interactive Media",
+      "type": "Interactive System",
+      "description": "An interactive system exploring the relationship between emotions and tea blending through web-based interface design. Users select emotions to generate custom tea blend recommendations.",
+      "thumbnail": "sarr.png",
+      "images": [
+        { "src": "sarr.png", "caption": "Emotion tea blending interface" }
+      ]
+    },
+    {
+      "id": "generative-typography",
+      "title": "Generative Typography",
+      "meta": "p5.js, Particle system, Web art",
+      "date": "May 2024",
+      "client": "Personal project",
+      "type": "Generative Design",
+      "description": "A generative typography system using particle systems and p5.js to create dynamic text visualizations. This project explores the boundary between readable text and abstract visual form.",
+      "thumbnail": "sarr.png",
+      "images": [
+        { "src": "sarr.png", "caption": "Generative typography system" }
+      ]
+    },
+    {
+      "id": "ar-time-experience",
+      "title": "AR Time Experience",
+      "meta": "Augmented reality, Speculative design",
+      "date": "April 2024",
+      "client": "class: Transformation Design",
+      "type": "AR Experience",
+      "description": "A speculative design project exploring augmented reality as a medium for experiencing and purchasing time. This work questions the commodification of temporal experience.",
+      "thumbnail": "sarr.png",
+      "images": [
+        { "src": "sarr.png", "caption": "AR time experience" }
+      ]
+    },
+    {
+      "id": "cyber-garden",
+      "title": "Cyber Garden",
+      "meta": "Installation, Interactive media",
+      "date": "March 2024",
+      "client": "Exhibition project",
+      "type": "Installation",
+      "description": "An interactive installation exploring the intersection of digital technology and natural environments through immersive media. The piece creates a hybrid space between organic and digital realms.",
+      "thumbnail": "sarr.png",
+      "images": [
+        { "src": "sarr.png", "caption": "Cyber garden installation" }
+      ]
+    },
+    {
+      "id": "sound-waves",
+      "title": "Sound Waves",
+      "meta": "Audio visualization, Web GL",
+      "date": "February 2024",
+      "client": "Personal project",
+      "type": "Audio Visualization",
+      "description": "An audio visualization project using WebGL to create dynamic visual representations of sound waves. Real-time audio input generates responsive visual patterns.",
+      "thumbnail": "sarr.png",
+      "images": [
+        { "src": "sarr.png", "caption": "Sound waves visualization" }
+      ]
+    },
+    {
+      "id": "memory-archive",
+      "title": "Memory Archive",
+      "meta": "Database design, Web interface",
+      "date": "January 2024",
+      "client": "class: Data & Society",
+      "type": "Web Interface",
+      "description": "A database-driven web interface for archiving and exploring personal and collective memories. This project examines how digital systems shape the way we preserve and access memory.",
+      "thumbnail": "sarr.png",
+      "images": [
+        { "src": "sarr.png", "caption": "Memory archive interface" }
+      ]
+    },
+    {
+      "id": "kinetic-poetry",
+      "title": "Kinetic Poetry",
+      "meta": "Motion design, Typography",
+      "date": "December 2023",
+      "client": "Personal project",
+      "type": "Motion Design",
+      "description": "A motion design project exploring the intersection of poetry and kinetic typography. Text becomes animated, adding temporal dimension to poetic meaning.",
+      "thumbnail": "sarr.png",
+      "images": [
+        { "src": "sarr.png", "caption": "Kinetic poetry" }
+      ]
+    },
+    {
+      "id": "climate-futures",
+      "title": "Climate Futures",
+      "meta": "Speculative design, Editorial",
+      "date": "November 2023",
+      "client": "class: Design Fiction",
+      "type": "Editorial Design",
+      "description": "A speculative design project imagining future scenarios related to climate change through editorial design. The work creates tangible artifacts from imagined futures.",
+      "thumbnail": "sarr.png",
+      "images": [
+        { "src": "sarr.png", "caption": "Climate futures editorial" }
+      ]
+    },
+    {
+      "id": "neural-networks",
+      "title": "Neural Networks",
+      "meta": "Machine learning, Visualization",
+      "date": "October 2023",
+      "client": "Research project",
+      "type": "Data Visualization",
+      "description": "A research project visualizing neural network architectures and machine learning processes. Complex computational processes are translated into comprehensible visual forms.",
+      "thumbnail": "sarr.png",
+      "images": [
+        { "src": "sarr.png", "caption": "Neural network visualization" }
+      ]
+    },
+    {
+      "id": "digital-botanica",
+      "title": "Digital Botanica",
+      "meta": "3D modeling, Blender, Animation",
+      "date": "September 2023",
+      "client": "Personal project",
+      "type": "3D Animation",
+      "description": "A 3D modeling and animation project exploring digital representations of botanical forms using Blender. Organic forms are reimagined through digital tools.",
+      "thumbnail": "sarr.png",
+      "images": [
+        { "src": "sarr.png", "caption": "Digital botanica" }
+      ]
+    },
+    {
+      "id": "lunar-calendar",
+      "title": "Lunar Calendar",
+      "meta": "Editorial design, Print",
+      "date": "August 2023",
+      "client": "client: Moon Studio",
+      "type": "Print Design",
+      "description": "An editorial design project creating a lunar calendar with careful attention to typography and print production. The calendar connects celestial cycles with daily life.",
+      "thumbnail": "sarr.png",
+      "images": [
+        { "src": "sarr.png", "caption": "Lunar calendar design" }
+      ]
+    },
+    {
+      "id": "urban-flows",
+      "title": "Urban Flows",
+      "meta": "Data visualization, City mapping",
+      "date": "July 2023",
+      "client": "class: Information Design",
+      "type": "Information Design",
+      "description": "A data visualization project mapping urban movement patterns and city flows through information design. The work reveals hidden patterns in urban mobility.",
+      "thumbnail": "sarr.png",
+      "images": [
+        { "src": "sarr.png", "caption": "Urban flows visualization" }
+      ]
+    }
+  ]
+}
