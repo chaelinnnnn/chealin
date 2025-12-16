@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Name - Chaelin Kim</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neue+Haas+Grotesk+Display+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #FFFFFF;
+            --text: #000;
+            --border: #d0d0d0;
+            --hover: #e8e8e8;
+        }
+
+        body {
+            font-family: -apple-system, "system-ui", Inter, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            font-size: 14.5px;
+            line-height: 1.6;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizelegibility;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23FF6FD6" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>') 12 12, auto;
+        }
+
+        a, button {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23FF6FD6" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>') 12 12, pointer;
+        }
+
+        /* Falling Stars */
+        .falling-star {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            animation: fall 1s ease-in forwards;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100px) rotate(180deg) scale(0);
+                opacity: 0;
+            }
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--bg);
+            z-index: 1000;
+            padding: 0 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: auto;
+            max-width: 100%;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-start;
+            background: #FFFFFF;
+            overflow: hidden;
+            width: 150px;
+            height: 85px;
+        }
+
+        .logo video {
+            width: 180px;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            background: #FFFFFF;
+            margin-left: -15px;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: var(--text);
+            font-size: 13px;
+            font-weight: 600;
+            transition: opacity 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .back-link:hover {
+            opacity: 0.6;
+        }
+
+        .back-arrow {
+            font-size: 16px;
+        }
+
+        /* Project Detail */
+        .project-detail {
+            margin-top: 120px;
+            padding: 0 20px 60px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .project-header {
+            margin-bottom: 60px;
+        }
+
+        .project-title {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .project-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .meta-label {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #666;
+        }
+
+        .meta-value {
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .project-description {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-top: 30px;
+            max-width: 800px;
+        }
+
+        /* Project Images */
+        .project-images {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .project-image {
+            width: 100%;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .image-caption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 15px;
+            padding: 0 5px;
+        }
+
+        /* Video Embed */
+        .project-video {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #000;
+        }
+
+        .project-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Navigation Between Projects */
+        .project-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 100px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+            gap: 40px;
+        }
+
+        .nav-project {
+            text-decoration: none;
+            color: var(--text);
+            transition: opacity 0.2s;
+            flex: 1;
+        }
+
+        .nav-project:hover {
+            opacity: 0.6;
+        }
+
+        .nav-label {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .nav-title {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .nav-project.next {
+            text-align: right;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 28px;
+            }
+
+            .project-meta-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .project-navigation {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .nav-project.next {
+                text-align: left;
+            }
+
+            .header-content {
+                padding: 10px;
+            }
+        }
+
+        /* Loading Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .project-detail {
+            animation: fadeIn 0.6s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <video autoplay loop muted playsinline preload="auto">
+                    <source src="logo.mp4" type="video/mp4">
+                </video>
+            </div>
+            <a href="index.html" class="back-link">
+                <span class="back-arrow">←</span>
+                Back to Work
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="project-detail">
+            <div class="project-header">
+                <h1 class="project-title">Project Title</h1>
+                
+                <div class="project-meta-grid">
+                    <div class="meta-item">
+                        <div class="meta-label">Role</div>
+                        <div class="meta-value">Art directing, Brand identity, Photography</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Date</div>
+                        <div class="meta-value">April 2025</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Client</div>
+                        <div class="meta-value">Client Name</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Type</div>
+                        <div class="meta-value">Brand Identity, Web Design</div>
+                    </div>
+                </div>
+
+                <div class="project-description">
+                    <p>This is the project description. You can write multiple paragraphs here to describe the project in detail, including the challenge, approach, and outcome.</p>
+                    <p>Add more paragraphs as needed to fully explain your work and process.</p>
+                </div>
+            </div>
+
+            <div class="project-images">
+                <!-- Main Hero Image -->
+                <div class="project-image">
+                    <img src="project-image-1.jpg" alt="Project image 1">
+                    <div class="image-caption">Caption for this image (optional)</div>
+                </div>
+
+                <!-- Additional Images -->
+                <div class="project-image">
+                    <img src="project-image-2.jpg" alt="Project image 2">
+                </div>
+
+                <div class="project-image">
+                    <img src="project-image-3.jpg" alt="Project image 3">
+                </div>
+
+                <!-- Video Example (if needed) -->
+                <!--
+                <div class="project-video">
+                    <video autoplay loop muted playsinline>
+                        <source src="project-video.mp4" type="video/mp4">
+                    </video>
+                </div>
+                -->
+
+                <div class="project-image">
+                    <img src="project-image-4.jpg" alt="Project image 4">
+                </div>
+            </div>
+
+            <!-- Navigation to other projects -->
+            <div class="project-navigation">
+                <a href="project-previous.html" class="nav-project prev">
+                    <div class="nav-label">Previous Project</div>
+                    <div class="nav-title">Previous Project Name</div>
+                </a>
+                <a href="project-next.html" class="nav-project next">
+                    <div class="nav-label">Next Project</div>
+                    <div class="nav-title">Next Project Name</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Video Seamless Loop Fix
+        const logoVideo = document.querySelector('.logo video');
+        if (logoVideo) {
+            logoVideo.removeAttribute('loop');
+            
+            logoVideo.addEventListener('timeupdate', function() {
+                if (this.currentTime >= this.duration - 0.1) {
+                    this.currentTime = 0;
+                }
+            });
+            
+            logoVideo.addEventListener('ended', function() {
+                this.currentTime = 0;
+                this.play();
+            });
+            
+            logoVideo.play().catch(e => console.log('Video autoplay prevented'));
+        }
+
+        // Falling Stars Effect
+        let lastStarTime = 0;
+        const starInterval = 50;
+
+        document.addEventListener('mousemove', (e) => {
+            const now = Date.now();
+            if (now - lastStarTime < starInterval) return;
+            lastStarTime = now;
+
+            const star = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            star.setAttribute('class', 'falling-star');
+            star.setAttribute('width', '12');
+            star.setAttribute('height', '12');
+            star.setAttribute('viewBox', '0 0 24 24');
+            star.style.left = e.clientX + 'px';
+            star.style.top = (e.clientY + window.scrollY) + 'px';
+            
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('fill', '#FF6FD6');
+            path.setAttribute('d', 'M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z');
+            
+            star.appendChild(path);
+            document.body.appendChild(star);
+
+            setTimeout(() => {
+                star.remove();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
