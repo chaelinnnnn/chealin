@@ -85,6 +85,12 @@
             height: 85px;
         }
 
+        .logo a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
         .logo video {
             width: 180px;
             height: auto;
@@ -281,16 +287,18 @@
     <header>
         <div class="header-content">
             <div class="logo">
-                <video autoplay loop muted playsinline preload="auto">
-                    <source src="logo.mp4" type="video/mp4">
-                </video>
+                <a href="index-new.html">
+                    <video autoplay loop muted playsinline preload="auto">
+                        <source src="logo.mp4" type="video/mp4">
+                    </video>
+                </a>
             </div>
             <nav>
-                <a href="#" data-page="work" class="nav-link active">Art directing<br>& Brand Identity</a>
-                <a href="#" data-page="work" class="nav-link">Interaction</a>
-                <a href="#" data-page="work" class="nav-link">Editorial</a>
-                <a href="#" data-page="work" class="nav-link">Film</a>
-                <a href="#" data-page="work" class="nav-link">Exhibition</a>
+                <a href="#" data-page="work" data-category="all" class="nav-link active">Art directing<br>& Brand Identity</a>
+                <a href="#" data-page="work" data-category="interaction" class="nav-link">Interaction</a>
+                <a href="#" data-page="work" data-category="editorial" class="nav-link">Editorial</a>
+                <a href="#" data-page="work" data-category="film" class="nav-link">Film</a>
+                <a href="#" data-page="work" data-category="exhibition" class="nav-link">Exhibition</a>
                 <a href="#" data-page="about" class="nav-link">About</a>
                 <span class="contact-email">present1513@gmail.com</span>
             </nav>
@@ -360,6 +368,7 @@
 
         // Load and display projects
         let projectsData = [];
+        let currentCategory = 'all';
 
         fetch('projects-data.json')
             .then(response => response.json())
@@ -373,7 +382,12 @@
             const gridView = document.getElementById('gridView');
             gridView.innerHTML = '';
 
-            projects.forEach(project => {
+            // Filter by category if not 'all'
+            const filteredProjects = currentCategory === 'all' 
+                ? projects 
+                : projects.filter(p => p.category === currentCategory);
+
+            filteredProjects.forEach(project => {
                 const gridItem = document.createElement('div');
                 gridItem.className = 'grid-item';
                 gridItem.innerHTML = `
@@ -398,7 +412,7 @@
             });
         }
 
-        // Navigation
+        // Navigation with category filtering
         const navLinks = document.querySelectorAll('.nav-link');
         const aboutPage = document.getElementById('aboutPage');
         const gridView = document.getElementById('gridView');
@@ -407,6 +421,7 @@
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 const page = link.dataset.page;
+                const category = link.dataset.category;
 
                 navLinks.forEach(l => l.classList.remove('active'));
                 link.classList.add('active');
@@ -417,6 +432,10 @@
                 } else {
                     aboutPage.classList.remove('active');
                     gridView.style.display = 'grid';
+                    
+                    // Use data-category or default to 'all'
+                    currentCategory = category || 'all';
+                    displayProjects(projectsData);
                 }
             });
         });
