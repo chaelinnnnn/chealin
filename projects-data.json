@@ -1,309 +1,37 @@
-{
-  "projects": [
-    {
-      "id": "2025-season-menu-sarr",
-      "title": "[2025 Season Menu] Sarr",
-      "category": "art-directing",
-      "meta": "Poster design, Graphic design",
-      "date": "April 2025",
-      "client": "Sarr",
-      "type": "Poster Design",
-      "description": {
-        "en": "Seasonal menu poster design for Sarr, exploring typography and visual identity through graphic design.",
-        "ko": "Sarr의 시즌 메뉴 포스터 디자인으로, 그래픽 디자인을 통해 타이포그래피와 비주얼 아이덴티티를 탐구했습니다."
-      },
-      "thumbnail": "sarr.png",
-      "images": [{ "src": "sarr.png", "caption": "Sarr seasonal menu poster" }]
+export const projects = [
+  {
+    id: "2025-season-menu-sarr",
+    title: "[2025 Season Menu] Sarr",
+    category: "art-directing",
+    meta: "Poster design, Graphic design",
+    date: "April 2025",
+    client: "Sarr",
+    type: "Poster Design",
+    description: {
+      en: "Seasonal menu poster design for Sarr, exploring typography and visual identity through graphic design.",
+      ko: "Sarr의 시즌 메뉴 포스터 디자인으로, 그래픽 디자인을 통해 타이포그래피와 비주얼 아이덴티티를 탐구했습니다."
     },
-    {
-      "id": "2025-season-menu-sarr-02",
-      "title": "[2025 Season Menu] Sarr",
-      "category": "art-directing",
-      "meta": "Poster design, Graphic design",
-      "date": "April 2025",
-      "client": "Sarr",
-      "type": "Poster Design",
-      "description": {
-        "en": "Seasonal menu poster design for Sarr, exploring typography and visual identity through graphic design.",
-        "ko": "Sarr의 시즌 메뉴 포스터 디자인으로, 그래픽 디자인을 통해 타이포그래피와 비주얼 아이덴티티를 탐구했습니다."
-      },
-      "thumbnail": "sarr.png",
-      "images": [{ "src": "sarr.png", "caption": "Sarr seasonal menu poster" }]
+    thumbnail: "sarr.png",
+    images: [
+      { src: "sarr.png", caption: "Sarr seasonal menu poster" }
+    ]
+  },
+
+  {
+    id: "ufo",
+    title: "UFO",
+    category: "interactive-media",
+    meta: "Interactive Media",
+    date: "October 2025",
+    client: "Academic Project",
+    type: "Interactive Media",
+    description: {
+      en: "An interactive web artwork visualizing UFO sighting data from 10 U.S. states using 3D sculptures built with Three.js.",
+      ko: "Three.js로 제작된 3D 조형물을 통해 미국 10개 주의 UFO 목격 데이터를 시각화한 인터랙티브 웹 아트워크입니다."
     },
-    {
-      "id": "ufo",
-      "title": "UFO",
-      "category": "interactive-media",
-      "meta": "Interactive Media",
-      "date": "October 2025",
-      "client": "Academic Project",
-      "type": "Interactive Media",
-      "description": {
-        "en": "An interactive web artwork visualizing UFO sighting data from 10 U.S. states using 3D sculptures inspired by crop circles and alien antennas. Built with Three.js; antenna height and complexity reflect the number of sightings. Users explore via mouse/zoom/pan and an interactive map reveals regional patterns.",
-        "ko": "크롭 서클과 외계인 안테나에서 영감을 받은 3D 조형물로 미국 10개 주의 UFO 목격 데이터를 시각화한 인터랙티브 웹 아트워크입니다. Three.js로 구현했으며 안테나의 높이와 복잡도는 목격 횟수를 반영합니다. 마우스/줌/팬 조작으로 주별 비교가 가능하고, 인터랙티브 지도로 지역별 패턴과 분포를 확인할 수 있습니다."
-      },
-      "thumbnail": "sarr.png",
-      "images": [
-        { "src": "sarr.png", "caption": "Main brand identity visual" },
-        { "src": "sarr.png", "caption": "Typography and color system" },
-        { "src": "sarr.png", "caption": "Brand photography direction" },
-        { "src": "sarr.png", "caption": "Brand applications" }
-      ]
-    },
-    {
-      "id": "tymora",
-      "title": "TYMORA",
-      "category": "art-directing",
-      "meta": "Speculative design, Brand identity",
-      "date": "December 2024",
-      "client": "Transformation Design (Class)",
-      "type": "Speculative Design",
-      "description": {
-        "en": "An interactive web artwork visualizing UFO sighting data from 10 U.S. states using 3D sculptures inspired by crop circles and alien antennas. Built with Three.js; antenna height and complexity reflect the number of sightings. Users explore via mouse/zoom/pan and an interactive map reveals regional patterns.",
-        "ko": "크롭 서클과 외계인 안테나에서 영감을 받은 3D 조형물로 미국 10개 주의 UFO 목격 데이터를 시각화한 인터랙티브 웹 아트워크입니다. Three.js로 구현했으며 안테나의 높이와 복잡도는 목격 횟수를 반영합니다. 마우스/줌/팬 조작으로 주별 비교가 가능하고, 인터랙티브 지도로 지역별 패턴과 분포를 확인할 수 있습니다."
-      },
-      "thumbnail": "sarr.png",
-      "images": [{ "src": "sarr.png", "caption": "TYMORA brand identity" }]
-    },
-    {
-      "id": "digital-time-capsule",
-      "title": "Digital Time Capsule",
-      "category": "interaction",
-      "meta": "Web development, Three.js, Interactive",
-      "date": "November 2024",
-      "client": "Personal Project",
-      "type": "Interactive Web",
-      "description": {
-        "en": "An interactive web artwork visualizing UFO sighting data from 10 U.S. states using 3D sculptures inspired by crop circles and alien antennas. Built with Three.js; antenna height and complexity reflect the number of sightings. Users explore via mouse/zoom/pan and an interactive map reveals regional patterns.",
-        "ko": "크롭 서클과 외계인 안테나에서 영감을 받은 3D 조형물로 미국 10개 주의 UFO 목격 데이터를 시각화한 인터랙티브 웹 아트워크입니다. Three.js로 구현했으며 안테나의 높이와 복잡도는 목격 횟수를 반영합니다. 마우스/줌/팬 조작으로 주별 비교가 가능하고, 인터랙티브 지도로 지역별 패턴과 분포를 확인할 수 있습니다."
-      },
-      "thumbnail": "sarr.png",
-      "images": [{ "src": "sarr.png", "caption": "Digital time capsule interface" }]
-    },
-    {
-      "id": "universe",
-      "title": "Universe",
-      "category": "interaction",
-      "meta": "Interactive Media",
-      "date": "November 2024",
-      "client": "Academic Project",
-      "type": "Interactive Media",
-      "description": {
-        "en": "Inspired by the quote “Somewhere, something incredible is waiting to be known,” particles arranged as text scatter and return with mouse movement, creating a cosmic effect. Users can adjust particle size, color, and interaction behavior in real time via GUI sliders while preserving overall consistency.",
-        "ko": "“Somewhere, something incredible is waiting to be known”이라는 문구에서 출발해, 텍스트 형태로 배치된 파티클이 마우스 움직임에 반응해 흩어지고 다시 돌아오며 우주적인 시각 효과를 만듭니다. GUI 슬라이더로 파티클의 크기/색/상호작용을 실시간 조절해 일관된 디자인 안에서 다양한 변화를 커스터마이징할 수 있습니다."
-      },
-      "thumbnail": "universe.png",
-      "images": [{ "src": "universe.png", "caption": "Hand tracking interface" }]
-    },
-    {
-      "id": "holiday-nagging-visualization",
-      "title": "Holiday Nagging Visualization",
-      "category": "interaction",
-      "meta": "Audio-visual art, Data visualization",
-      "date": "September 2024",
-      "client": "Personal Project",
-      "type": "Audio-Visual Art",
-      "description": {
-        "en": "A cultural art piece using audio recordings to explore Korean family dynamics during holidays through interactive visualization, combining data visualization with personal narrative.",
-        "ko": "오디오 녹음을 바탕으로 명절 시기 한국 가족 문화의 긴장과 기대를 인터랙티브 시각화로 탐구한 문화 예술 작업입니다. 데이터 시각화와 개인 서사를 결합해 공감 가능한 경험을 구성했습니다."
-      },
-      "thumbnail": "sarr.png",
-      "images": [{ "src": "sarr.png", "caption": "Holiday nagging visualization" }]
-    },
-    {
-      "id": "ufo-data-sculpture",
-      "title": "UFO Data Sculpture",
-      "category": "interaction",
-      "meta": "Three.js, Data visualization, 3D printing",
-      "date": "August 2024",
-      "client": "Personal Project",
-      "type": "Data Sculpture",
-      "description": {
-        "en": "A data visualization featuring metallic sculptures representing UFO sightings across U.S. states, translating data into physical form and exploring the relationship between information and material presence.",
-        "ko": "미국 여러 주의 UFO 목격 데이터를 금속 조형물로 번역한 데이터 시각화 작업입니다. 정보를 물질로 전환하는 과정에서 데이터와 물성의 관계를 탐구합니다."
-      },
-      "thumbnail": "sarr.png",
-      "images": [{ "src": "sarr.png", "caption": "UFO data sculpture" }]
-    },
-    {
-      "id": "emotion-tea-blending",
-      "title": "Emotion Tea Blending",
-      "category": "interaction",
-      "meta": "Interactive system, Web design",
-      "date": "June 2024",
-      "client": "Interactive Media (Class)",
-      "type": "Interactive System",
-      "description": {
-        "en": "An interactive system exploring the relationship between emotions and tea blending through a web-based interface. Users select emotions to generate custom tea blend recommendations.",
-        "ko": "감정과 티 블렌딩의 관계를 웹 인터페이스로 탐구한 인터랙티브 시스템입니다. 사용자가 감정을 선택하면 맞춤형 티 블렌드 추천을 생성합니다."
-      },
-      "thumbnail": "sarr.png",
-      "images": [{ "src": "sarr.png", "caption": "Emotion tea blending interface" }]
-    },
-    {
-      "id": "generative-typography",
-      "title": "Generative Typography",
-      "category": "interaction",
-      "meta": "p5.js, Particle system, Web art",
-      "date": "May 2024",
-      "client": "Personal Project",
-      "type": "Generative Design",
-      "description": {
-        "en": "A generative typography system using particle systems and p5.js to create dynamic text visualizations, exploring the boundary between readable text and abstract visual form.",
-        "ko": "파티클 시스템과 p5.js로 동적인 텍스트 시각화를 만드는 제너레이티브 타이포그래피 시스템입니다. 읽을 수 있는 텍스트와 추상적 형태 사이의 경계를 탐구합니다."
-      },
-      "thumbnail": "sarr.png",
-      "images": [{ "src": "sarr.png", "caption": "Generative typography system" }]
-    },
-    {
-      "id": "ar-time-experience",
-      "title": "AR Time Experience",
-      "category": "interaction",
-      "meta": "Augmented reality, Speculative design",
-      "date": "April 2024",
-      "client": "Transformation Design (Class)",
-      "type": "AR Experience",
-      "description": {
-        "en": "A speculative project exploring augmented reality as a medium for experiencing and purchasing time, questioning the commodification of temporal experience.",
-        "ko": "증강현실을 ‘시간을 경험하고 구매하는 매체’로 상정한 스페큘러티브 디자인 프로젝트입니다. 시간 경험의 상품화에 질문을 던집니다."
-      },
-      "thumbnail": "sarr.png",
-      "images": [{ "src": "sarr.png", "caption": "AR time experience" }]
-    },
-    {
-      "id": "cyber-garden",
-      "title": "Cyber Garden",
-      "category": "exhibition",
-      "meta": "Installation, Interactive media",
-      "date": "March 2024",
-      "client": "Exhibition Project",
-      "type": "Installation",
-      "description": {
-        "en": "An interactive installation exploring the intersection of digital technology and natural environments through immersive media, creating a hybrid space between organic and digital realms.",
-        "ko": "몰입형 미디어를 통해 디지털 기술과 자연 환경의 교차점을 탐구하는 인터랙티브 설치 작업입니다. 유기적/디지털 영역이 혼성된 공간을 구성합니다."
-      },
-      "thumbnail": "sarr.png",
-      "images": [{ "src": "sarr.png", "caption": "Cyber garden installation" }]
-    },
-    {
-      "id": "sound-waves",
-      "title": "Sound Waves",
-      "category": "interaction",
-      "meta": "Audio visualization, WebGL",
-      "date": "February 2024",
-      "client": "Personal Project",
-      "type": "Audio Visualization",
-      "description": {
-        "en": "A WebGL audio visualization where real-time audio input generates responsive visual patterns.",
-        "ko": "WebGL 기반 오디오 시각화 작업으로, 실시간 오디오 입력에 반응해 시각 패턴이 동적으로 생성됩니다."
-      },
-      "thumbnail": "sarr.png",
-      "images": [{ "src": "sarr.png", "caption": "Sound waves visualization" }]
-    },
-    {
-      "id": "memory-archive",
-      "title": "Memory Archive",
-      "category": "interaction",
-      "meta": "Database design, Web interface",
-      "date": "January 2024",
-      "client": "Data & Society (Class)",
-      "type": "Web Interface",
-      "description": {
-        "en": "A database-driven web interface for archiving and exploring personal and collective memories, examining how digital systems shape preservation and access.",
-        "ko": "개인/집단 기억을 아카이빙하고 탐색하는 데이터베이스 기반 웹 인터페이스입니다. 디지털 시스템이 기억의 보존과 접근 방식을 어떻게 형성하는지 탐구합니다."
-      },
-      "thumbnail": "sarr.png",
-      "images": [{ "src": "sarr.png", "caption": "Memory archive interface" }]
-    },
-    {
-      "id": "kinetic-poetry",
-      "title": "Kinetic Poetry",
-      "category": "interaction",
-      "meta": "Motion design, Typography",
-      "date": "December 2023",
-      "client": "Personal Project",
-      "type": "Motion Design",
-      "description": {
-        "en": "A motion design project exploring poetry through kinetic typography, adding temporal dimension to meaning.",
-        "ko": "키네틱 타이포그래피로 시(詩)를 해석하는 모션 디자인 작업입니다. 시간성을 부여해 의미를 확장합니다."
-      },
-      "thumbnail": "sarr.png",
-      "images": [{ "src": "sarr.png", "caption": "Kinetic poetry" }]
-    },
-    {
-      "id": "climate-futures",
-      "title": "Climate Futures",
-      "category": "editorial",
-      "meta": "Speculative design, Editorial",
-      "date": "November 2023",
-      "client": "Design Fiction (Class)",
-      "type": "Editorial Design",
-      "description": {
-        "en": "A speculative editorial design project imagining climate-related future scenarios, creating tangible artifacts from imagined futures.",
-        "ko": "기후 변화와 관련된 미래 시나리오를 상상하고 편집 디자인으로 구체화한 스페큘러티브 프로젝트입니다. 상상 속 미래의 ‘물건’을 만들어 제시합니다."
-      },
-      "thumbnail": "sarr.png",
-      "images": [{ "src": "sarr.png", "caption": "Climate futures editorial" }]
-    },
-    {
-      "id": "neural-networks",
-      "title": "Neural Networks",
-      "category": "interaction",
-      "meta": "Machine learning, Visualization",
-      "date": "October 2023",
-      "client": "Research Project",
-      "type": "Data Visualization",
-      "description": {
-        "en": "A research visualization translating neural network architectures and ML processes into comprehensible visual forms.",
-        "ko": "신경망 아키텍처와 머신러닝 프로세스를 이해 가능한 시각 형태로 번역한 리서치 시각화 작업입니다."
-      },
-      "thumbnail": "sarr.png",
-      "images": [{ "src": "sarr.png", "caption": "Neural network visualization" }]
-    },
-    {
-      "id": "digital-botanica",
-      "title": "Digital Botanica",
-      "category": "interaction",
-      "meta": "3D modeling, Blender, Animation",
-      "date": "September 2023",
-      "client": "Personal Project",
-      "type": "3D Animation",
-      "description": {
-        "en": "A 3D modeling and animation project exploring botanical forms through digital tools, reimagining organic structures as computational artifacts.",
-        "ko": "블렌더 기반 3D 모델링/애니메이션으로 식물 형태를 디지털 도구로 재해석한 작업입니다. 유기적 구조를 계산적 아티팩트로 다시 구성합니다."
-      },
-      "thumbnail": "sarr.png",
-      "images": [{ "src": "sarr.png", "caption": "Digital botanica" }]
-    },
-    {
-      "id": "lunar-calendar",
-      "title": "Lunar Calendar",
-      "category": "editorial",
-      "meta": "Editorial design, Print",
-      "date": "August 2023",
-      "client": "Moon Studio",
-      "type": "Print Design",
-      "description": {
-        "en": "An editorial print project creating a lunar calendar with careful typography and production, connecting celestial cycles with daily life.",
-        "ko": "타이포그래피와 인쇄 제작을 정교하게 다듬은 음력 캘린더 편집/인쇄 프로젝트입니다. 천체의 주기를 일상과 연결합니다."
-      },
-      "thumbnail": "sarr.png",
-      "images": [{ "src": "sarr.png", "caption": "Lunar calendar design" }]
-    },
-    {
-      "id": "urban-flows",
-      "title": "Urban Flows",
-      "category": "editorial",
-      "meta": "Data visualization, City mapping",
-      "date": "July 2023",
-      "client": "Information Design (Class)",
-      "type": "Information Design",
-      "description": {
-        "en": "An information design project mapping urban movement patterns, revealing hidden mobility flows through data visualization and city mapping.",
-        "ko": "도시 이동 패턴과 흐름을 데이터 시각화/시티 매핑으로 드러낸 정보 디자인 프로젝트입니다. 숨겨진 모빌리티 패턴을 가시화합니다."
-      },
-      "thumbnail": "sarr.png",
-      "images": [{ "src": "sarr.png", "caption": "Urban flows visualization" }]
-    }
-  ]
-}
+    thumbnail: "sarr.png",
+    images: [
+      { src: "sarr.png", caption: "UFO data visualization" }
+    ]
+  }
+];
