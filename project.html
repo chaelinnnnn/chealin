@@ -100,7 +100,7 @@
       font-weight: 600;
     }
 
-    /* ✅ 핵심: fixed header 아래로 본문 전체를 내림 */
+    /* ✅ fixed header 아래로 본문 전체 내리기 (loading 포함) */
     main { padding-top: 180px; }
 
     .project-detail {
@@ -220,7 +220,7 @@
   </main>
 
   <script>
-    // Video loop tweak (safe)
+    // Logo video loop tweak (safe)
     const logoVideo = document.querySelector('.logo video');
     if (logoVideo) {
       logoVideo.removeAttribute('loop');
@@ -273,18 +273,14 @@
           return;
         }
 
-        // ✅ id 없이 들어오면 첫 프로젝트로 URL 정리 (확실히 보이게)
-        if (!projectId) {
-          window.location.replace(`project.html?id=${projects[0].id}`);
-          return;
-        }
-
-        const resolvedId = String(projectId);
-        const project = projects.find(p => String(p.id) === resolvedId);
+        // ✅ 최종 핵심: id 없으면 첫 프로젝트를 그냥 렌더링 (리다이렉트 없음)
+        const project = projectId
+          ? projects.find(p => String(p.id) === String(projectId))
+          : projects[0];
 
         if (!project) {
           document.getElementById('loading').innerHTML =
-            `Project not found. <a href="index.html">Go back</a>`;
+            'Project not found. <a href="index.html">Go back</a>';
           return;
         }
 
