@@ -56,7 +56,7 @@
       "category": "art-directing",
       "meta": "Art directing, Brand identity, Photography",
       "date": "April 2025",
-      "client": "client: Sarr",
+      "client": "Academic project",
       "type": "Brand Identity, Art Direction",
       "description": {
         "ko": "Sarr는 현대 디자인과 전통 공예의 교차점을 탐구하는 종합 브랜드 아이덴티티 프로젝트입니다.",
@@ -67,18 +67,18 @@
     },
 
     {
-      "id": "sarr-04",
-      "title": "Sarr",
-      "category": "art-directing",
-      "meta": "Art directing, Brand identity, Photography",
-      "date": "April 2025",
-      "client": "client: Sarr",
-      "type": "Brand Identity, Art Direction",
+      "id": "UFO",
+      "title": "UFO",
+      "category": "Interaction",
+      "meta": "Interaction web",
+      "date": "November 2025",
+      "client": "Academic Project",
+      "type": "Interaction Web",
       "description": {
         "ko": "Sarr는 현대 디자인과 전통 공예의 교차점을 탐구하는 종합 브랜드 아이덴티티 프로젝트입니다.",
         "en": "Sarr is a comprehensive brand identity project that explores the intersection of contemporary design and traditional craftsmanship."
       },
-      "thumbnail": "sarr.png",
+      "thumbnail": "ufo.mp4",
       "images": [{ "src": "sarr.png", "caption": "Main brand identity visual" }]
     },
 
@@ -195,18 +195,18 @@
     },
 
     {
-      "id": "sarr-12",
-      "title": "Sarr",
-      "category": "art-directing",
-      "meta": "Art directing, Brand identity, Photography",
-      "date": "April 2025",
-      "client": "client: Sarr",
-      "type": "Brand Identity, Art Direction",
+      "id": "Depromeet promotion video",
+      "title": "Depromeet promotion video",
+      "category": "Film",
+      "meta": "Art directing, Film",
+      "date": "October 2023",
+      "client": "Client: DEPROMEET",
+      "type": "Film",
       "description": {
-        "ko": "Sarr는 현대 디자인과 전통 공예의 교차점을 탐구하는 종합 브랜드 아이덴티티 프로젝트입니다.",
-        "en": "Sarr is a comprehensive brand identity project that explores the intersection of contemporary design and traditional craftsmanship."
+        "ko": "DEPROMEET 14의 전반적인 필름 디렉팅, 그래픽 디자인, 사운드 디자인을 담당했습니다.",
+        "en": "I worked on the overall film directing, graphic design, and sound design for DEPROMEET 14."
       },
-      "thumbnail": "sarr.png",
+      "thumbnail": "depromeet.png",
       "images": [{ "src": "sarr.png", "caption": "Main brand identity visual" }]
     },
 
