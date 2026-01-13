@@ -28,7 +28,6 @@
 
     a { text-decoration: none; color: inherit; cursor: inherit; }
 
-    /* ===== Header ===== */
     header {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -69,13 +68,10 @@
 
     nav a:hover { opacity: 0.6; }
 
-    /* ===== Layout ===== */
     main { padding-top: 180px; }
 
     .wrap {
       padding: 0 20px 60px;
-      max-width: none;
-      margin: 0;
     }
 
     .grid {
@@ -84,7 +80,6 @@
       gap: 10px;
     }
 
-    /* ===== Cards ===== */
     .card { display: block; }
 
     .thumb {
@@ -111,16 +106,13 @@
 
     .title { font-weight: 600; }
     .category { color: #666; }
-    .year { color: #666; }
 
-    /* ===== Loading ===== */
     .loading {
       text-align: center;
       padding: 80px 0;
       color: #666;
     }
 
-    /* ===== Falling Star Cursor (추가된 부분) ===== */
     .falling-star {
       position: fixed;
       pointer-events: none;
@@ -171,7 +163,6 @@
 </main>
 
 <script>
-  /* ===== Falling Star Cursor (추가된 부분) ===== */
   let lastStar = 0;
   document.addEventListener('mousemove', e => {
     const now = Date.now();
@@ -198,13 +189,10 @@
     setTimeout(() => star.remove(), 1000);
   });
 
-  /* ===== Projects ===== */
   const loading = document.getElementById('loading');
   const grid = document.getElementById('grid');
   const params = new URLSearchParams(location.search);
   const category = params.get('category');
-
-  const yearOnly = d => (d || '').match(/(19|20)\d{2}/)?.[0] || '';
 
   const renderThumb = (p) => {
     const src = p.thumbnail || '';
@@ -237,7 +225,6 @@
               <div class="title">${p.title}</div>
               <div class="category">${p.category || ''}</div>
             </div>
-            <div class="year">${yearOnly(p.date)}</div>
           </div>
         </a>
       `).join('');
