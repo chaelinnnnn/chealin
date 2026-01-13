@@ -3,7 +3,7 @@
     {
       "id": "2025-season-menu-sarr",
       "title": "[2025 Season menu] Sarr",
-      "category": "art-directing",
+      "category": "Editorial",
       "meta": "Poster design, Graphic design",
       "date": "April 2025",
       "client": "client: Sarr",
@@ -21,7 +21,7 @@
     {
       "id": "sarr-01",
       "title": "Sarr",
-      "category": "art-directing",
+      "category": "Art directing & Brand Identity",
       "meta": "Art directing, Brand identity, Photography",
       "date": "April 2025",
       "client": "client: Sarr",
@@ -150,8 +150,8 @@
     {
       "id": "Every Singles Time",
       "title": "Every Singles Time",
-      "category": "art-directing",
-      "meta": "Art directing, Brand identity",
+      "category": "Brand Identity",
+      "meta": "Art directing & Brand Identity",
       "date": "April 2025",
       "client": "Client: Singles Magazine",
       "type": "Brand Identity, Art Direction",
@@ -212,13 +212,13 @@
     },
 
     {
-      "id": "sarr-13",
-      "title": "Sarr",
-      "category": "art-directing",
-      "meta": "Art directing, Brand identity, Photography",
+      "id": "Ding-dong",
+      "title": "Ding-dong",
+      "category": "UX/UI",
+      "meta": "UX/UI",
       "date": "April 2025",
-      "client": "client: Sarr",
-      "type": "Brand Identity, Art Direction",
+      "client": "Depromeet project",
+      "type": "UX/UI",
       "description": {
         "ko": "Sarr는 현대 디자인과 전통 공예의 교차점을 탐구하는 종합 브랜드 아이덴티티 프로젝트입니다.",
         "en": "Sarr is a comprehensive brand identity project that explores the intersection of contemporary design and traditional craftsmanship."
