@@ -95,6 +95,23 @@
     }
     .project-image video{background:#000;}
 
+    /* ✅ Vimeo iframe responsive wrapper */
+    .vimeo-wrap{
+      position:relative;
+      width:100%;
+      padding-top:56.25%; /* 16:9 */
+      background:#000;
+      overflow:hidden;
+    }
+    .vimeo-wrap iframe{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      border:0;
+      display:block;
+    }
+
     .image-caption{
       font-size:13px;
       color:#666;
@@ -226,6 +243,7 @@
 
     return raw
       .map((item) => {
+        // string shorthand 지원
         if (typeof item === 'string') {
           const srcStr = item;
           const ext = (srcStr.split('.').pop() || '').toLowerCase();
@@ -233,23 +251,53 @@
           return { type, src: srcStr };
         }
 
-        const src = (item && item.src) ? item.src : '';
+        // object
+        const type = (item && item.type) ? item.type : '';
         const caption = (item && item.caption) ? item.caption : '';
-        if (!src) return null;
 
-        let type = (item && item.type) ? item.type : '';
-        if (!type) {
-          const ext = (src.split('.').pop() || '').toLowerCase();
-          type = (['mp4','webm','mov'].includes(ext)) ? 'video' : 'image';
+        // vimeo는 id를 사용
+        if (type === 'vimeo') {
+          const id = (item && item.id) ? String(item.id) : '';
+          if (!id) return null;
+          return { type: 'vimeo', id, caption };
         }
 
-        return { type, src, caption };
+        // 일반 src 기반
+        const src = (item && item.src) ? item.src : '';
+        if (!src) return null;
+
+        let finalType = type;
+        if (!finalType) {
+          const ext = (src.split('.').pop() || '').toLowerCase();
+          finalType = (['mp4','webm','mov'].includes(ext)) ? 'video' : 'image';
+        }
+
+        return { type: finalType, src, caption };
       })
       .filter(Boolean);
   };
 
-  // ✅ HERE: project page videos autoplay + muted + loop
+  // ✅ Project page: mp4 video autoplay + muted + loop
+  // ✅ Vimeo 지원: { type:"vimeo", id:"1103721206" }
   const renderMediaItem = (item, projectTitle) => {
+    // Vimeo
+    if (item.type === 'vimeo' && item.id) {
+      return `
+        <div class="project-image">
+          <div class="vimeo-wrap">
+            <iframe
+              src="https://player.vimeo.com/video/${item.id}?autoplay=0&loop=1&muted=0&badge=0&autopause=0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+              title="${projectTitle || ''}">
+            </iframe>
+          </div>
+          ${item.caption ? `<div class="image-caption">${item.caption}</div>` : ''}
+        </div>
+      `;
+    }
+
+    // mp4 video file
     if (item.type === 'video') {
       return `
         <div class="project-image">
@@ -261,6 +309,7 @@
       `;
     }
 
+    // image
     return `
       <div class="project-image">
         <img src="${item.src}" alt="${projectTitle}">
