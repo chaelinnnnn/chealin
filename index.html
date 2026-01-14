@@ -28,10 +28,11 @@
 
     a { text-decoration: none; color: inherit; cursor: inherit; }
 
+    /* ✅ 헤더 배경 완전 투명 */
     header {
       position: fixed;
       top: 0; left: 0; right: 0;
-      background: #fff;
+      background: transparent;
       padding: 0 20px;
       z-index: 1000;
     }
@@ -68,7 +69,8 @@
 
     nav a:hover { opacity: 0.6; }
 
-    main { padding-top: 180px; }
+    /* 헤더가 투명해졌으니 여백 살짝 줄임 */
+    main { padding-top: 150px; }
 
     .wrap {
       padding: 0 20px 60px;
@@ -126,7 +128,7 @@
     }
 
     @media (max-width: 768px) {
-      main { padding-top: 160px; }
+      main { padding-top: 130px; }
       .grid { grid-template-columns: 1fr; }
     }
   </style>
@@ -194,13 +196,10 @@
   const params = new URLSearchParams(location.search);
   const category = params.get('category');
 
-  // ✅ thumbnail이 "문자열"일 수도 있고, {type, src} 객체일 수도 있게 안전 처리
   const getThumb = (p) => {
-    // 새 구조: thumbnail: { type, src }
     if (p && p.thumbnail && typeof p.thumbnail === 'object' && p.thumbnail.src) {
       return { type: p.thumbnail.type || '', src: p.thumbnail.src || '' };
     }
-    // 구 구조: thumbnail: "file.png"
     if (p && typeof p.thumbnail === 'string') {
       const src = p.thumbnail;
       const ext = src.split('.').pop().toLowerCase();
@@ -215,7 +214,6 @@
     if (!src) return '';
 
     if (type === 'video') {
-      // type이 video면 확장자 검사 없이 video로 렌더링
       return `
         <video autoplay loop muted playsinline preload="metadata">
           <source src="${src}" type="video/mp4">
@@ -234,19 +232,17 @@
         ? projects.filter(p => (p.category || '').toLowerCase() === category.toLowerCase())
         : projects;
 
-        grid.innerHTML = filtered.map(p => `
+      grid.innerHTML = filtered.map(p => `
         <a class="card" href="project.html?id=${encodeURIComponent(p.id)}">
-        <div class="thumb">
-        ${renderThumb(p)}
-        </div>
-        <div class="info">
-        <div>
-        <div class="title">${p.title || ''}</div>
-        <div class="category">${p.type || ''}</div>
-        </div>
-        </div>
+          <div class="thumb">${renderThumb(p)}</div>
+          <div class="info">
+            <div>
+              <div class="title">${p.title || ''}</div>
+              <div class="category">${p.type || ''}</div>
+            </div>
+          </div>
         </a>
-        `).join('');
+      `).join('');
 
       loading.style.display = 'none';
       grid.style.display = 'grid';
