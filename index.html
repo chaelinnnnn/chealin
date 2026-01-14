@@ -13,6 +13,15 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     :root { --bg:#fff; --text:#000; }
 
+    /* ✅ "고정이 안 되는" 모든 케이스를 막기 위해:
+       - window 스크롤 제거
+       - 콘텐츠만 내부 스크롤
+       - 헤더는 viewport에 fixed */
+    html, body {
+      height: 100%;
+      overflow: hidden; /* ✅ window 스크롤 막음 */
+    }
+
     body {
       font-family: -apple-system, "system-ui", Inter, "Segoe UI", Roboto, sans-serif;
       background: var(--bg);
@@ -20,10 +29,6 @@
       font-size: 13px;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
-
-      /* ✅ 헤더 높이만큼 밀어줌 (고정 핵심) */
-      padding-top: 115px;
-
       cursor: url('data:image/svg+xml;utf8,\
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">\
 <path fill="%23FF6FD6" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>\
@@ -32,7 +37,7 @@
 
     a { text-decoration: none; color: inherit; cursor: inherit; }
 
-    /* ✅ 헤더 완전 고정 */
+    /* ✅ 헤더: 무조건 화면 상단 고정 */
     header {
       position: fixed;
       top: 0;
@@ -42,16 +47,15 @@
       background: #fff;
       padding: 0 20px;
       z-index: 9999;
-
-      /* transform 이슈 방어 */
-      transform: translateZ(0);
+      transform: translateZ(0); /* ✅ 레이어 고정(방어) */
     }
 
     .header-content {
+      height: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 100%;
+      padding: 15px 0;
     }
 
     .logo {
@@ -80,7 +84,13 @@
 
     nav a:hover { opacity: 0.6; }
 
-    main { padding-top: 0; }
+    /* ✅ 실제 스크롤은 이 컨테이너에서만 일어남 */
+    #page-scroll {
+      height: 100vh;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-top: 115px; /* ✅ 헤더 높이만큼 아래로 */
+    }
 
     .wrap {
       padding: 0 20px 60px;
@@ -138,8 +148,8 @@
     }
 
     @media (max-width: 768px) {
-      body { padding-top: 115px; }
       .grid { grid-template-columns: 1fr; }
+      nav { gap: 18px; }
     }
   </style>
 </head>
@@ -167,12 +177,15 @@
   </div>
 </header>
 
-<main>
-  <div class="wrap">
-    <div class="loading" id="loading">Loading projects...</div>
-    <div class="grid" id="grid" style="display:none;"></div>
-  </div>
-</main>
+<!-- ✅ 콘텐츠는 이 안에서만 스크롤 -->
+<div id="page-scroll">
+  <main>
+    <div class="wrap">
+      <div class="loading" id="loading">Loading projects...</div>
+      <div class="grid" id="grid" style="display:none;"></div>
+    </div>
+  </main>
+</div>
 
 <script>
   let lastStar = 0;
@@ -207,10 +220,14 @@
   const category = params.get('category');
 
   const getThumb = (p) => {
-    if (p?.thumbnail?.src) return p.thumbnail;
-    if (typeof p.thumbnail === 'string') {
-      const ext = p.thumbnail.split('.').pop().toLowerCase();
-      return { type: ['mp4','mov','webm'].includes(ext) ? 'video' : 'image', src: p.thumbnail };
+    if (p && p.thumbnail && typeof p.thumbnail === 'object' && p.thumbnail.src) {
+      return { type: p.thumbnail.type || '', src: p.thumbnail.src || '' };
+    }
+    if (p && typeof p.thumbnail === 'string') {
+      const src = p.thumbnail;
+      const ext = src.split('.').pop().toLowerCase();
+      const type = (['mp4','webm','mov'].includes(ext)) ? 'video' : 'image';
+      return { type, src };
     }
     return { type: 'image', src: '' };
   };
@@ -218,9 +235,14 @@
   const renderThumb = (p) => {
     const { type, src } = getThumb(p);
     if (!src) return '';
-    return type === 'video'
-      ? `<video autoplay loop muted playsinline><source src="${src}" type="video/mp4"></video>`
-      : `<img src="${src}" alt="">`;
+    if (type === 'video') {
+      return `
+        <video autoplay loop muted playsinline preload="metadata">
+          <source src="${src}" type="video/mp4">
+        </video>
+      `;
+    }
+    return `<img src="${src}" alt="${p.title || ''}">`;
   };
 
   fetch('projects-data.json', { cache: 'no-store' })
@@ -245,8 +267,13 @@
 
       loading.style.display = 'none';
       grid.style.display = 'grid';
+    })
+    .catch(err => {
+      console.error(err);
+      loading.textContent = 'Failed to load projects.';
+      loading.style.display = 'block';
+      grid.style.display = 'none';
     });
 </script>
 </body>
 </html>
-
