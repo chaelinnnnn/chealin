@@ -29,14 +29,13 @@
     a { text-decoration: none; color: inherit; cursor: inherit; }
 
     /* ✅ 헤더 배경 완전 투명 */
-    header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      background: transparent;
-      padding: 0 20px;
-      z-index: 1000;
+     header {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    padding: 0 20px;
+    z-index: 1000;
     }
-
     .header-content {
       display: flex;
       justify-content: space-between;
@@ -70,7 +69,7 @@
     nav a:hover { opacity: 0.6; }
 
     /* 헤더가 투명해졌으니 여백 살짝 줄임 */
-    main { padding-top: 150px; }
+    main { padding-top: 0px; }
 
     .wrap {
       padding: 0 20px 60px;
