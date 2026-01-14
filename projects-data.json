@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-      "id": "Display design & Graphic-sarr",
+      "id": "display-design-graphic-sarr",
       "title": "[Display design & Graphic] Sarr",
       "category": "Editorial",
       "meta": "Poster design, Graphic design",
@@ -13,23 +13,22 @@
         "en": "Seasonal menu poster design for Sarr, exploring typography and visual identity through graphic design."
       },
       "thumbnail": {
-      "type": "video",
-      "src": "sarrposter.mp4"
+        "type": "video",
+        "src": "sarrposter.mp4"
       },
       "media": [
-      {
-      "type": "video",
-      "src": "sarrposter.mp4"
-      },
-      {
-      "type": "image",
-      "src": "sarrposter.png"
-      }
-    ]
+        {
+          "type": "video",
+          "src": "sarrposter.mp4"
+        },
+        {
+          "type": "image",
+          "src": "sarrposter.png"
+        }
+      ]
     },
-
     {
-     "id": "2025-season-menu-sarr",
+      "id": "2025-season-menu-sarr",
       "title": "[2025 Season menu] Sarr",
       "category": "Editorial",
       "meta": "Poster design, Graphic design",
@@ -41,36 +40,44 @@
         "en": "Seasonal menu poster design for Sarr, exploring typography and visual identity through graphic design."
       },
       "thumbnail": {
-      "type": "image",
-      "src": "avocato.png"
+        "type": "image",
+        "src": "avocato.png"
       },
       "media": [
-      {
-      "type": "image",
-      "src": "avocato1.png"
-      },
-      {
-      "type": "image",
-      "src": "avocato2.png"
-      }
-  ]
-
+        {
+          "type": "image",
+          "src": "avocato1.png"
+        },
+        {
+          "type": "image",
+          "src": "avocato2.png"
+        }
+      ]
+    },
     {
       "id": "sarr-02",
       "title": "Sarr",
       "category": "art-directing",
       "meta": "Art directing, Brand identity, Photography",
       "date": "April 2025",
-      "client": "client: Sarr",
+      "client": "Client: Sarr",
       "type": "Brand Identity, Art Direction",
       "description": {
         "ko": "Sarr는 현대 디자인과 전통 공예의 교차점을 탐구하는 종합 브랜드 아이덴티티 프로젝트입니다.",
         "en": "Sarr is a comprehensive brand identity project that explores the intersection of contemporary design and traditional craftsmanship."
       },
-      "thumbnail": "sarr.png",
-      "images": [{ "src": "sarr.png", "caption": "Main brand identity visual" }]
+      "thumbnail": {
+        "type": "image",
+        "src": "sarr.png"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "sarr.png",
+          "caption": "Main brand identity visual"
+        }
+      ]
     },
-
     {
       "id": "sarr-03",
       "title": "Sarr",
@@ -83,12 +90,20 @@
         "ko": "Sarr는 현대 디자인과 전통 공예의 교차점을 탐구하는 종합 브랜드 아이덴티티 프로젝트입니다.",
         "en": "Sarr is a comprehensive brand identity project that explores the intersection of contemporary design and traditional craftsmanship."
       },
-      "thumbnail": "sarr.png",
-      "images": [{ "src": "sarr.png", "caption": "Main brand identity visual" }]
+      "thumbnail": {
+        "type": "image",
+        "src": "sarr.png"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "sarr.png",
+          "caption": "Main brand identity visual"
+        }
+      ]
     },
-
     {
-      "id": "UFO",
+      "id": "ufo",
       "title": "UFO",
       "category": "Interaction",
       "meta": "Interaction web",
@@ -99,12 +114,19 @@
         "ko": "Sarr는 현대 디자인과 전통 공예의 교차점을 탐구하는 종합 브랜드 아이덴티티 프로젝트입니다.",
         "en": "Sarr is a comprehensive brand identity project that explores the intersection of contemporary design and traditional craftsmanship."
       },
-      "thumbnail": "ufo.mp4",
-      "images": [{ "src": "sarr.png", "caption": "Main brand identity visual" }]
+      "thumbnail": {
+        "type": "video",
+        "src": "ufo.mp4"
+      },
+      "media": [
+        {
+          "type": "video",
+          "src": "ufo.mp4"
+        }
+      ]
     },
-
     {
-      "id": "Universe",
+      "id": "universe-01",
       "title": "Universe",
       "category": "Interaction",
       "meta": "Interaction Web",
@@ -115,12 +137,20 @@
         "ko": "Sarr는 현대 디자인과 전통 공예의 교차점을 탐구하는 종합 브랜드 아이덴티티 프로젝트입니다.",
         "en": "Sarr is a comprehensive brand identity project that explores the intersection of contemporary design and traditional craftsmanship."
       },
-      "thumbnail": "sarr.png",
-      "images": [{ "src": "sarr.png", "caption": "Main brand identity visual" }]
+      "thumbnail": {
+        "type": "image",
+        "src": "sarr.png"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "sarr.png",
+          "caption": "Main brand identity visual"
+        }
+      ]
     },
-
     {
-      "id": "Universe",
+      "id": "universe-02",
       "title": "Universe",
       "category": "Interaction",
       "meta": "Interaction Web",
@@ -131,45 +161,67 @@
         "ko": "Sarr는 현대 디자인과 전통 공예의 교차점을 탐구하는 종합 브랜드 아이덴티티 프로젝트입니다.",
         "en": "Sarr is a comprehensive brand identity project that explores the intersection of contemporary design and traditional craftsmanship."
       },
-      "thumbnail": "universe.mp4",
-      "images": [{ "src": "sarr.png", "caption": "Main brand identity visual" }]
+      "thumbnail": {
+        "type": "video",
+        "src": "universe.mp4"
+      },
+      "media": [
+        {
+          "type": "video",
+          "src": "universe.mp4"
+        }
+      ]
     },
-
-
     {
       "id": "sarr-07",
       "title": "Sarr",
       "category": "art-directing",
       "meta": "Art directing, Brand identity, Photography",
       "date": "April 2025",
-      "client": "client: Sarr",
+      "client": "Client: Sarr",
       "type": "Brand Identity, Art Direction",
       "description": {
         "ko": "Sarr는 현대 디자인과 전통 공예의 교차점을 탐구하는 종합 브랜드 아이덴티티 프로젝트입니다.",
         "en": "Sarr is a comprehensive brand identity project that explores the intersection of contemporary design and traditional craftsmanship."
       },
-      "thumbnail": "sarr.png",
-      "images": [{ "src": "sarr.png", "caption": "Main brand identity visual" }]
+      "thumbnail": {
+        "type": "image",
+        "src": "sarr.png"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "sarr.png",
+          "caption": "Main brand identity visual"
+        }
+      ]
     },
-
     {
       "id": "sarr-08",
       "title": "Sarr",
       "category": "art-directing",
       "meta": "Art directing, Brand identity, Photography",
       "date": "April 2025",
-      "client": "client: ",
+      "client": "Client: ",
       "type": "Brand Identity, Art Direction",
       "description": {
         "ko": "Sarr는 현대 디자인과 전통 공예의 교차점을 탐구하는 종합 브랜드 아이덴티티 프로젝트입니다.",
         "en": "Sarr is a comprehensive brand identity project that explores the intersection of contemporary design and traditional craftsmanship."
       },
-      "thumbnail": "sarr.png",
-      "images": [{ "src": "sarr.png", "caption": "Main brand identity visual" }]
+      "thumbnail": {
+        "type": "image",
+        "src": "sarr.png"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "sarr.png",
+          "caption": "Main brand identity visual"
+        }
+      ]
     },
-
     {
-      "id": "Every Singles Time",
+      "id": "every-singles-time",
       "title": "Every Singles Time",
       "category": "Brand Identity",
       "meta": "Art directing & Brand Identity",
@@ -180,44 +232,68 @@
         "ko": "Sarr는 현대 디자인과 전통 공예의 교차점을 탐구하는 종합 브랜드 아이덴티티 프로젝트입니다.",
         "en": "Sarr is a comprehensive brand identity project that explores the intersection of contemporary design and traditional craftsmanship."
       },
-      "thumbnail": "singles.png",
-      "images": [{ "src": "sarr.png", "caption": "Main brand identity visual" }]
+      "thumbnail": {
+        "type": "image",
+        "src": "singles.png"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "sarr.png",
+          "caption": "Main brand identity visual"
+        }
+      ]
     },
-
     {
       "id": "sarr-10",
       "title": "Sarr",
       "category": "art-directing",
       "meta": "Art directing, Brand identity, Photography",
       "date": "April 2025",
-      "client": "client: Sarr",
+      "client": "Client: Sarr",
       "type": "Brand Identity, Art Direction",
       "description": {
         "ko": "Sarr는 현대 디자인과 전통 공예의 교차점을 탐구하는 종합 브랜드 아이덴티티 프로젝트입니다.",
         "en": "Sarr is a comprehensive brand identity project that explores the intersection of contemporary design and traditional craftsmanship."
       },
-      "thumbnail": "sarr.png",
-      "images": [{ "src": "sarr.png", "caption": "Main brand identity visual" }]
+      "thumbnail": {
+        "type": "image",
+        "src": "sarr.png"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "sarr.png",
+          "caption": "Main brand identity visual"
+        }
+      ]
     },
-
     {
       "id": "sarr-11",
       "title": "Sarr",
       "category": "art-directing",
       "meta": "Art directing, Brand identity, Photography",
       "date": "April 2025",
-      "client": "client: Sarr",
+      "client": "Client: Sarr",
       "type": "Brand Identity, Art Direction",
       "description": {
         "ko": "Sarr는 현대 디자인과 전통 공예의 교차점을 탐구하는 종합 브랜드 아이덴티티 프로젝트입니다.",
         "en": "Sarr is a comprehensive brand identity project that explores the intersection of contemporary design and traditional craftsmanship."
       },
-      "thumbnail": "sarr.png",
-      "images": [{ "src": "sarr.png", "caption": "Main brand identity visual" }]
+      "thumbnail": {
+        "type": "image",
+        "src": "sarr.png"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "sarr.png",
+          "caption": "Main brand identity visual"
+        }
+      ]
     },
-
     {
-      "id": "Depromeet promotion video",
+      "id": "depromeet-promotion-video",
       "title": "Depromeet promotion video",
       "category": "Film",
       "meta": "Art directing, Film",
@@ -228,12 +304,20 @@
         "ko": "DEPROMEET 14의 전반적인 필름 디렉팅, 그래픽 디자인, 사운드 디자인을 담당했습니다.",
         "en": "I worked on the overall film directing, graphic design, and sound design for DEPROMEET 14."
       },
-      "thumbnail": "depromeet.png",
-      "images": [{ "src": "sarr.png", "caption": "Main brand identity visual" }]
+      "thumbnail": {
+        "type": "image",
+        "src": "depromeet.png"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "sarr.png",
+          "caption": "Main brand identity visual"
+        }
+      ]
     },
-
     {
-      "id": "Ding-dong",
+      "id": "ding-dong",
       "title": "Ding-dong",
       "category": "UX/UI",
       "meta": "UX/UI",
@@ -244,24 +328,41 @@
         "ko": "Sarr는 현대 디자인과 전통 공예의 교차점을 탐구하는 종합 브랜드 아이덴티티 프로젝트입니다.",
         "en": "Sarr is a comprehensive brand identity project that explores the intersection of contemporary design and traditional craftsmanship."
       },
-      "thumbnail": "Dingdong.png",
-      "images": [{ "src": "sarr.png", "caption": "Main brand identity visual" }]
+      "thumbnail": {
+        "type": "image",
+        "src": "Dingdong.png"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "sarr.png",
+          "caption": "Main brand identity visual"
+        }
+      ]
     },
-
     {
       "id": "sarr-14",
       "title": "Sarr",
       "category": "art-directing",
       "meta": "Art directing, Brand identity, Photography",
       "date": "April 2025",
-      "client": "client: Sarr",
+      "client": "Client: Sarr",
       "type": "Brand Identity, Art Direction",
       "description": {
         "ko": "Sarr는 현대 디자인과 전통 공예의 교차점을 탐구하는 종합 브랜드 아이덴티티 프로젝트입니다.",
         "en": "Sarr is a comprehensive brand identity project that explores the intersection of contemporary design and traditional craftsmanship."
       },
-      "thumbnail": "sarr.png",
-      "images": [{ "src": "sarr.png", "caption": "Main brand identity visual" }]
+      "thumbnail": {
+        "type": "image",
+        "src": "sarr.png"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "sarr.png",
+          "caption": "Main brand identity visual"
+        }
+      ]
     }
   ]
 }
