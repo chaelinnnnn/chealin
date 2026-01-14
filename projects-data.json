@@ -238,9 +238,12 @@
       },
       "media": [
         {
+          "type": "video",
+          "src": "singles.mp4"
+        },
+        {
           "type": "image",
-          "src": "sarr.png",
-          "caption": "Main brand identity visual"
+          "src": "singles1.png"
         }
       ]
     },
