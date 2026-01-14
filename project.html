@@ -4,9 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Project - Chaelin Kim</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Neue+Haas+Grotesk+Display+Pro:wght@400;500;600&display=swap" rel="stylesheet" />
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     :root { --bg:#fff; --text:#000; --border:#d0d0d0; }
@@ -21,6 +23,7 @@
       -webkit-font-smoothing:antialiased;
       cursor:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23FF6FD6" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>') 12 12, auto;
     }
+
     a,button{
       cursor:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23FF6FD6" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>') 12 12, pointer;
     }
@@ -73,6 +76,25 @@
       margin-right:auto;
       animation:fadeIn .6s ease forwards;
     }
+
+    /* ✅ 상세 상단: title/type/client/date 노출 */
+    .project-meta{ margin-bottom:40px; }
+    .project-title{
+      font-size:18px;
+      font-weight:600;
+      margin-bottom:10px;
+      line-height:1.3;
+    }
+    .project-info{
+      font-size:13px;
+      color:#666;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      line-height:1.4;
+    }
+    .project-info span{ white-space:nowrap; }
+
     .project-description{
       font-size:13px;
       line-height:1.8;
@@ -95,11 +117,11 @@
     }
     .project-image video{background:#000;}
 
-    /* ✅ Vimeo iframe responsive wrapper */
+    /* ✅ Vimeo responsive wrapper */
     .vimeo-wrap{
       position:relative;
       width:100%;
-      padding-top:56.25%; /* 16:9 */
+      padding-top:56.25%;
       background:#000;
       overflow:hidden;
     }
@@ -243,7 +265,7 @@
 
     return raw
       .map((item) => {
-        // string shorthand 지원
+        // string shorthand
         if (typeof item === 'string') {
           const srcStr = item;
           const ext = (srcStr.split('.').pop() || '').toLowerCase();
@@ -251,18 +273,16 @@
           return { type, src: srcStr };
         }
 
-        // object
         const type = (item && item.type) ? item.type : '';
         const caption = (item && item.caption) ? item.caption : '';
 
-        // vimeo는 id를 사용
+        // ✅ Vimeo: { type:"vimeo", id:"1103721206" }
         if (type === 'vimeo') {
           const id = (item && item.id) ? String(item.id) : '';
           if (!id) return null;
           return { type: 'vimeo', id, caption };
         }
 
-        // 일반 src 기반
         const src = (item && item.src) ? item.src : '';
         if (!src) return null;
 
@@ -277,8 +297,7 @@
       .filter(Boolean);
   };
 
-  // ✅ Project page: mp4 video autoplay + muted + loop
-  // ✅ Vimeo 지원: { type:"vimeo", id:"1103721206" }
+  // Render media items (mp4 autoplay loop + vimeo iframe)
   const renderMediaItem = (item, projectTitle) => {
     // Vimeo
     if (item.type === 'vimeo' && item.id) {
@@ -297,7 +316,7 @@
       `;
     }
 
-    // mp4 video file
+    // mp4 video
     if (item.type === 'video') {
       return `
         <div class="project-image">
@@ -349,12 +368,19 @@
         : (project.description || '');
 
     const mediaItems = normalizeMedia(project);
-    const mediaHTML = (Array.isArray(mediaItems) ? mediaItems : [])
-      .map((item) => renderMediaItem(item, project.title || ''))
-      .join('');
+    const mediaHTML = mediaItems.map((item) => renderMediaItem(item, project.title || '')).join('');
 
     const content = `
       <div class="project-header">
+        <div class="project-meta">
+          <div class="project-title">${project.title || ''}</div>
+          <div class="project-info">
+            ${project.type ? `<span>${project.type}</span>` : ''}
+            ${project.client ? `<span>${project.client}</span>` : ''}
+            ${project.date ? `<span>${project.date}</span>` : ''}
+          </div>
+        </div>
+
         <div class="project-description">
           <p>${description}</p>
         </div>
@@ -381,7 +407,7 @@
     projectContent.innerHTML = content;
     projectContent.style.display = 'block';
 
-    // Extra safety: if autoplay is blocked, try play() after DOM insert
+    // autoplay safety (if blocked)
     projectContent.querySelectorAll('video[autoplay]').forEach(v => {
       v.play().catch(() => {});
     });
