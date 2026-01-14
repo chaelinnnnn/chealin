@@ -194,17 +194,36 @@
   const params = new URLSearchParams(location.search);
   const category = params.get('category');
 
+  // ✅ thumbnail이 "문자열"일 수도 있고, {type, src} 객체일 수도 있게 안전 처리
+  const getThumb = (p) => {
+    // 새 구조: thumbnail: { type, src }
+    if (p && p.thumbnail && typeof p.thumbnail === 'object' && p.thumbnail.src) {
+      return { type: p.thumbnail.type || '', src: p.thumbnail.src || '' };
+    }
+    // 구 구조: thumbnail: "file.png"
+    if (p && typeof p.thumbnail === 'string') {
+      const src = p.thumbnail;
+      const ext = src.split('.').pop().toLowerCase();
+      const type = (['mp4','webm','mov'].includes(ext)) ? 'video' : 'image';
+      return { type, src };
+    }
+    return { type: 'image', src: '' };
+  };
+
   const renderThumb = (p) => {
-    const src = p.thumbnail || '';
-    const ext = src.split('.').pop().toLowerCase();
-    if (['mp4', 'webm', 'mov'].includes(ext)) {
+    const { type, src } = getThumb(p);
+    if (!src) return '';
+
+    if (type === 'video') {
+      // type이 video면 확장자 검사 없이 video로 렌더링
       return `
         <video autoplay loop muted playsinline preload="metadata">
           <source src="${src}" type="video/mp4">
         </video>
       `;
     }
-    return `<img src="${src}" alt="${p.title}">`;
+
+    return `<img src="${src}" alt="${p.title || ''}">`;
   };
 
   fetch('projects-data.json', { cache: 'no-store' })
@@ -212,17 +231,17 @@
     .then(data => {
       const projects = data.projects || [];
       const filtered = category
-        ? projects.filter(p => p.category === category)
+        ? projects.filter(p => (p.category || '').toLowerCase() === category.toLowerCase())
         : projects;
 
       grid.innerHTML = filtered.map(p => `
-        <a class="card" href="project.html?id=${p.id}">
+        <a class="card" href="project.html?id=${encodeURIComponent(p.id)}">
           <div class="thumb">
             ${renderThumb(p)}
           </div>
           <div class="info">
             <div>
-              <div class="title">${p.title}</div>
+              <div class="title">${p.title || ''}</div>
               <div class="category">${p.category || ''}</div>
             </div>
           </div>
@@ -231,6 +250,12 @@
 
       loading.style.display = 'none';
       grid.style.display = 'grid';
+    })
+    .catch(err => {
+      console.error(err);
+      loading.textContent = 'Failed to load projects.';
+      loading.style.display = 'block';
+      grid.style.display = 'none';
     });
 </script>
 </body>
