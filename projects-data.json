@@ -81,62 +81,34 @@
         }
       ]
     },
-    {
-      "id": "Sarr Brand Identity Design",
-      "title": "Sarr Brand Identity Design",
-      "category": "art-directing",
-      "meta": "Art directing, Brand Identity, Photography",
-      "date": "April 2025",
-      "client": "Client: Sarr",
-      "type": "Art directing, Brand Identity",
-      "description": {
+        {
+        "id": "Sarr Brand Identity Design",
+        "title": "Sarr Brand Identity Design",
+        "category": "art-directing",
+        "meta": "Art directing, Brand Identity, Photography",
+        "date": "April 2025",
+        "client": "Client: Sarr",
+        "type": "Art directing, Brand Identity",
+        "description": {
         "ko": "Sarr는 현대 디자인과 전통 공예의 교차점을 탐구하는 종합 브랜드 아이덴티티 프로젝트입니다.",
         "en": "Sarr is a comprehensive brand identity project that explores the intersection of contemporary design and traditional craftsmanship."
-      },
-      "thumbnail": {
+        },
+        "thumbnail": {
         "type": "image",
         "src": "sarr.png"
-      },
-      "media": [
-        {
-          "type": "image",
-          "src": "sarr1.png",
         },
-        {
-          "type": "image",
-          "src": "sarr2.png"
-        },
-        {
-          "type": "image",
-          "src": "sarr3.png"
-        },
-        {
-          "type": "image",
-          "src": "sarr4.png"
-        },
-        {
-          "type": "image",
-          "src": "sarr5.png"
-        },
-        {
-          "type": "image",
-          "src": "sarr6.png"
-        },
-        {
-          "type": "image",
-          "src": "sarr7.png"
-        },
-        {
-          "type": "image",
-          "src": "sarr8.png"
-        },
-        {
-          "type": "image",
-          "src": "sarr9.png"
-        }
-      
+        "media": [
+        { "type": "image", "src": "sarr1.png" },
+        { "type": "image", "src": "sarr2.png" },
+        { "type": "image", "src": "sarr3.png" },
+        { "type": "image", "src": "sarr4.png" },
+        { "type": "image", "src": "sarr5.png" },
+        { "type": "image", "src": "sarr6.png" },
+        { "type": "image", "src": "sarr7.png" },
+        { "type": "image", "src": "sarr8.png" },
+        { "type": "image", "src": "sarr9.png" }
       ]
-    },
+      }
     {
       "id": "Ufo",
       "title": "UFO Interaction Web",
@@ -235,8 +207,8 @@
       "client": "Client: Singles Magazine",
       "type": "Title Design",
       "description": {
-        "ko": "Sarr는 현대 디자인과 전통 공예의 교차점을 탐구하는 종합 브랜드 아이덴티티 프로젝트입니다.",
-        "en": "Sarr is a comprehensive brand identity project that explores the intersection of contemporary design and traditional craftsmanship."
+        "ko": "Singles Magazine의 'EVERY SINGLES TIME' 타이틀 아이덴티티 디자인을 진행하였습니다.",
+        "en": "I worked on the title identity design for ‘EVERY SINGLES TIME,’ a feature by Singles Magazine."
       },
       "thumbnail": {
         "type": "image",
