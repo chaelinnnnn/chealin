@@ -100,9 +100,41 @@
       "media": [
         {
           "type": "image",
-          "src": "sarr.png",
-          "caption": "Main brand identity visual"
-        }
+          "src": "sarr1.png",
+        },
+        {
+          "type": "image",
+          "src": "sarr2.png"
+        },
+        {
+          "type": "image",
+          "src": "sarr3.png"
+        },
+        {
+          "type": "image",
+          "src": "sarr4.png"
+        },
+        {
+          "type": "image",
+          "src": "sarr5.png"
+        },
+        {
+          "type": "image",
+          "src": "sarr6.png"
+        },
+        {
+          "type": "image",
+          "src": "sarr7.png"
+        },
+        {
+          "type": "image",
+          "src": "sarr8.png"
+        },
+        {
+          "type": "image",
+          "src": "sarr9.png"
+        },
+      
       ]
     },
     {
@@ -156,7 +188,7 @@
       ]
     },
     {
-      "id": "Junction Asia 2024",
+      "id": "Universe",
       "title": "Universe",
       "category": "Interaction",
       "meta": "Interaction Web",
@@ -164,8 +196,8 @@
       "client": "Academic Project",
       "type": "Interaction Web",
       "description": {
-        "ko": "Sarr는 현대 디자인과 전통 공예의 교차점을 탐구하는 종합 브랜드 아이덴티티 프로젝트입니다.",
-        "en": "Sarr is a comprehensive brand identity project that explores the intersection of contemporary design and traditional craftsmanship."
+        "ko": "'Somewhere, something incredible is waiting to be known”이라는 문구를 통해 우주의 광활함과 미지의 가능성을 표현하고자 했습니다. 이를 바탕으로 텍스트 형태를 따라 배치된 파티클은 마우스 움직임에 반응해 흩어졌다가 다시 돌아오며 우주적인 시각 효과를 만들어냅니다. 파티클의 크기, 색상, 상호작용 속성은 GUI 슬라이더로 실시간 조절할 수 있어, 일관된 디자인 속에서 다양한 시각적 변화를 커스터마이징할 수 있습니다.",
+        "en": "By quoting the phrase “Somewhere, something incredible is waiting to be known,” this work expresses the vastness of the universe and the potential of the unknown. Based on this concept, particles arranged along the form of text respond to mouse movement by scattering and returning to their original positions, creating a cosmic visual effect. Particle attributes such as size, color, and interaction behavior can be adjusted in real time through GUI sliders, allowing users to customize dynamic visual variations while maintaining overall design consistency."
       },
       "thumbnail": {
         "type": "video",
@@ -174,7 +206,23 @@
       "media": [
         {
           "type": "video",
-          "src": "universe.mp4"
+          "src": "singles.mp4"
+        },
+        {
+          "type": "image",
+          "src": "universe1.png"
+        },
+        {
+          "type": "image",
+          "src": "universe2.png"
+        },
+        {
+          "type": "image",
+          "src": "universe3.png"
+        },
+        {
+          "type": "image",
+          "src": "universe4.png"
         }
       ]
     },
