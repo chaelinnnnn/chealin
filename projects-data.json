@@ -111,7 +111,30 @@
     },
     {
       "id": "Ufo",
-      "title": "UFO Interaction Web",
+      "title": "UFO Data Web",
+      "category": "Interaction",
+      "meta": "Interaction web",
+      "date": "November 2025",
+      "client": "Academic Project",
+      "type": "Interaction Web",
+      "description": {
+        "ko": "이 프로젝트는 10개 미국 주의 UFO 목격 데이터를 인터랙티브 웹 아트워크로 시각화한 작품입니다. 크롭 서클과 외계인 통신 안테나에서 영감을 받은 3D 조형물로 데이터를 표현합니다. Three.js를 사용해 각 주의 목격 횟수에 비례하여 안테나 구조의 높이와 복잡도를 설계했습니다. 사용자는 마우스 컨트롤을 통해 각 안테나를 자유롭게 탐색하거나, 모든 주를 나란히 비교하면서 UFO 데이터와 현상을 예술적 관점에서 경험할 수 있습니다. 인터랙티브 지도는 10개 미국 주 전반에 걸친 목격 보고를 시각화하여, 사용자가 한눈에 패턴과 분포를 파악할 수 있도록 합니다. 이 프로젝트를 통해 사용자는 직관적인 줌 및 팬 컨트롤로 지도를 탐색하고, 각 지역의 상세 정보에 접근할 수 있습니다.",
+        "en": "This project is an interactive web artwork that visualizes UFO sighting data from 10 U.S. states using 3D sculptures inspired by crop circles and alien antennas. Built with Three.js, each antenna’s height and complexity reflect the number of sightings. Users can explore and compare states through intuitive mouse, zoom, and pan controls, while an interactive map reveals overall patterns and distributions across regions."
+      },
+      "thumbnail": {
+        "type": "video",
+        "src": "ufo.mp4"
+      },
+      "media": [
+        {
+          "type": "video",
+          "src": "ufo.mp4"
+        }
+      ]
+    },
+    {
+      "id": "Ufo",
+      "title": "UFO Data Map",
       "category": "Interaction",
       "meta": "Interaction web",
       "date": "November 2025",
